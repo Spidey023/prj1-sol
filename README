@@ -1,0 +1,34 @@
+# Elixir Data Parser
+
+This Python script serves as a lexer and parser for a simple Elixir-like data format. It tokenizes input strings into a list of tokens and then parses those tokens into a hierarchical data structure.
+
+## Features
+
+- Tokenizes input strings into a list of tokens.
+- Parses tokens into a hierarchical data structure representing lists, tuples, maps, atoms, integers, and booleans.
+
+## Usage
+
+### Input Format
+
+The script accepts input strings in a specific Elixir-like format.
+
+### Run the Script
+
+Execute the script by running `python elixir-data.py` in your terminal.
+
+### Providing Input
+
+- Input strings should follow the specified Elixir-like format.
+- Press `Ctrl + D` to signal the end of input and exit the script.
+
+### Output
+
+The script will output the parsed hierarchical data structure based on the provided input.
+
+## Example
+
+### Input
+
+```elixir
+%{ :a => 22, b: 33 }

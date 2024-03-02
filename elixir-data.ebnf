@@ -1,0 +1,15 @@
+sentence = { data_literal } ;
+data_literal = list_literal | tuple_literal | map_literal | primitive_literal ;
+primitive_literal = integer | atom | boolean ;
+list_literal = "[" , [ data_literal , { "," , data_literal } ] , "]" ;
+tuple_literal = "{" , [ data_literal , { "," , data_literal } ] , "}" ;
+map_literal = "%{" , [ key_pair , { "," , key_pair } ] , "}" ;
+key_pair = ( data_literal , "=>" , data_literal ) | ( key , data_literal ) ;
+integer = digit , { digit | "_" } ;
+atom = ":" , ( alpha | "_" ) , { alphanumeric | "_" } ;
+key = ( alpha | "_" ) , { alphanumeric | "_" } ;
+boolean = "true" | "false" ;
+
+alpha = "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z" ;
+digit = "0" | "1" | ... | "9" ;
+alphanumeric = alpha | digit ;
